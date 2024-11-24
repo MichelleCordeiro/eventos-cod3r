@@ -1,9 +1,9 @@
-import Page from '@/components/shared/template/Page'
+import Pagina from '@/components/template/Pagina';
 
 export default function Home() {
   return (
-    <Page>
+    <Pagina>
       <div>Inicio</div>
-    </Page>
+    </Pagina>
   )
 }
