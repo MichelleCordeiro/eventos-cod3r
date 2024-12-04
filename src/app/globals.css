@@ -40,19 +40,19 @@ body {
   }
 
   .button.blue {
-    @apply bg-blue-600 text-white
+    @apply bg-sky-600 text-white
   }
 
   .button.blue:hover {
-    @apply bg-blue-600
+    @apply bg-sky-700
   }
 
   .button.red {
-    @apply bg-red-600 text-white
+    @apply bg-rose-600 text-white
   }
 
   .button.red:hover {
-    @apply bg-red-600
+    @apply bg-rose-700
   }
 
   .button.green {
@@ -60,6 +60,6 @@ body {
   }
 
   .button.green:hover {
-    @apply bg-green-600
+    @apply bg-green-700
   }
 }
