@@ -29,7 +29,7 @@ export default function PaginaEventos() {
                 Admin
               </Link>
               <Link
-                href={`/convite/${evento.alias}}`}
+                href={`/convite/${evento.alias}`}
                 className='flex-1 button green'
               >
                 Convite

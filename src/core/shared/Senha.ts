@@ -17,4 +17,4 @@ export default class Senha {
   }
 }
 
-console.log(Senha.nova())
+// console.log(Senha.nova())

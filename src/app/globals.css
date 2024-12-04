@@ -36,7 +36,7 @@ body {
   .button {
     @apply flex items-center justify-center;
     @apply gap-2 rounded-md px-9 h-9;
-    @apply text-sm font-semibold;
+    @apply text-sm font-bold;
   }
 
   .button.blue {
