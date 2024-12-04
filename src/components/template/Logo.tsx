@@ -9,7 +9,7 @@ const fonte = Righteous({
 
 export default function Logo() {
   return (
-    <Link href='/' className={'{fonte.className} flex items-center gap-2'}>
+    <Link href='/' className={`${fonte.className} flex items-center gap-2`}>
       <Image src='/logo.svg' width={50} height={50} alt='Logo' />
       <h1 className='leading-5 flex-col items-center text-lg'>
         <div>
