@@ -15,10 +15,9 @@ export default function PaginaAdminEvento(props: any) {
 
   const presentes = evento?.convidados.filter(c => c.confirmado) ?? []
   const ausentes = evento?.convidados.filter(c => !c.confirmado) ?? []
-  const totalGeral = evento?.convidados.reduce(
+  const totalGeral = presentes.reduce(
     (total: number, convidado: Convidado) => {
       return total + convidado.qtdeAcompanhantes + 1
-      // return total + (convidado.confirmado ? convidado.qtdeAcompanhantes + 1 : 0)
     }, 0
   ) ?? 0
 
@@ -31,8 +30,6 @@ export default function PaginaAdminEvento(props: any) {
   useEffect(() => {
     carregarEvento()
   }, [id, senha])
-
-  console.log('presentes: ', presentes, 'ausentes: ', ausentes, 'totalGeral: ', totalGeral)
 
   return (
     <div className='flex flex-col items-center'>
@@ -48,10 +45,4 @@ export default function PaginaAdminEvento(props: any) {
       )}
     </div>
   )
-
-  // return evento ? (
-  //   <div className='flex flex-col'>
-  //     <span>{evento.nome}</span>
-  //   </div>
-  // ) : null
 }
