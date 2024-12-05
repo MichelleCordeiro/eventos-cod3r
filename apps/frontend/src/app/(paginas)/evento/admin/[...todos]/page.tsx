@@ -2,8 +2,8 @@
 
 import DashboardEvento from '@/components/evento/DashboardEvento'
 import FormSenhaEvento from '@/components/evento/FormSenhaEvento'
-import { Convidado, Evento, eventos } from '@/core'
-import { use, useEffect, useState } from 'react'
+import { Convidado, Evento, eventos } from 'core'
+import { use, useEffect, useState } from "react"
 
 export default function PaginaAdminEvento(props: any) {
   const params: any = use(props.params)
