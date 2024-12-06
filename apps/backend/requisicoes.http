@@ -7,4 +7,16 @@ GET http://localhost:4000/eventos
 GET http://localhost:4000/eventos/evento-fullstack
 
 ###
-GET http://localhost:4000/eventos/53ae44ec-30fb-4e5a-9b0b-a9fbedd8e3c1
+GET http://localhost:4000/eventos/7a0a5640-8e46-404d-bd90-dcba6589d57c
+
+###
+GET http://localhost:4000/eventos/validar/evento-fullstack/21ff36d7-8fa7-495e-9339-d1687458b660
+
+###
+POST http://localhost:4000/eventos/acessar
+Content-Type: application/json
+
+{
+    "id": "65965e1c-8055-4795-b4a3-da93bbe97e31",
+    "senha": "familia202"
+}
