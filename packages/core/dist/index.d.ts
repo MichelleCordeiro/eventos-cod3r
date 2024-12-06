@@ -31,7 +31,7 @@ declare function complementarConvidado(convidado: Partial<Convidado>): Convidado
 
 declare class Id {
     static novo(): string;
-    private static hash;
+    static valido(id: string): boolean;
 }
 
 declare class Alias {
