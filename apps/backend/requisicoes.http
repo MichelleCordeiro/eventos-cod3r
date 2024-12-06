@@ -14,9 +14,48 @@ GET http://localhost:4000/eventos/validar/evento-fullstack/21ff36d7-8fa7-495e-93
 
 ###
 POST http://localhost:4000/eventos/acessar
+
+Content-Type: application/json
+{
+    "id": "65965e1c-8055-4795-b4a3-da93bbe97e31",
+    "senha": "familia202"
+}
+
+###
+POST http://localhost:4000/eventos/reuniao-familia-oliveira/convidado
 Content-Type: application/json
 
 {
     "id": "65965e1c-8055-4795-b4a3-da93bbe97e31",
-    "senha": "familia202"
+    "nome": "Leonardo Leitão",
+    "email": "leonardo@formacao.dev",
+    "confirmado": true,
+    "possuiAcompanhantes": true,
+    "qtdeAcompanhantes": 10
+}
+
+###
+POST http://localhost:4000/eventos
+Content-Type: application/json
+
+{
+    "id": "8bbf36d7-8fa7-495e-9339-d1687458b333",
+    "alias": "semana-formacao-dev",
+    "nome": "Evento Semana Formação.DEV",
+    "data": "2025-12-31T23:00",
+    "local": "Natal",
+    "descricao": "Evento de tecnologia",
+    "senha": "novasenha",
+    "imagem": "https://www.formacao.dev/assets/img/formacao-dev.png",
+    "imagemBackground": "https://www.formacao.dev/assets/img/formacao-dev-background.png",
+    "publicoEsperado": 1000,
+    "convidados": [
+        {
+            "nome": "Mic Chelle",
+            "email": "mic@email.dev",
+            "confirmado": true,
+            "possuiAcompanhantes": true,
+            "qtdeAcompanhantes": 7
+        }
+    ]
 }
