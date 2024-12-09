@@ -4,7 +4,7 @@ GET http://localhost:4000/ping
 GET http://localhost:4000/eventos
 
 ###
-GET http://localhost:4000/eventos/evento-fullstack
+GET http://localhost:4000/eventos/semana-formacao-dev
 
 ###
 GET http://localhost:4000/eventos/7a0a5640-8e46-404d-bd90-dcba6589d57c
@@ -39,7 +39,6 @@ POST http://localhost:4000/eventos
 Content-Type: application/json
 
 {
-    "id": "8bbf36d7-8fa7-495e-9339-d1687458b333",
     "alias": "semana-formacao-dev",
     "nome": "Evento Semana Formação.DEV",
     "data": "2025-12-31T23:00",
