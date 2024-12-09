@@ -5,7 +5,6 @@ import {
   Convidado,
   Data,
   Evento,
-  eventos,
   Id
 } from 'core'
 import { EventoPrisma } from './evento.prisma'
@@ -42,11 +41,11 @@ export class EventosController {
     const evento = await this.repo.buscarPorId(dados.id);
 
     if (!evento) {
-      throw new Error('Evento não encontrado.');
+      throw new HttpException('Evento não encontrado.', 400);
     }
 
     if (evento.senha !== dados.senha) {
-      throw new Error('Senha não corresponde ao evento.');
+      throw new HttpException('Senha não corresponde ao evento.', 400);
     }
 
     return this.serializar(evento);
@@ -60,7 +59,7 @@ export class EventosController {
     const evento = await this.repo.buscarPorAlias(alias);
 
     if (!evento) {
-      throw new Error('Evento não encontrado.');
+      throw new HttpException('Evento não encontrado.', 400);
     }
 
     const convidadoCompleto = complementarConvidado(convidado);
@@ -72,7 +71,7 @@ export class EventosController {
     const eventoCadastrado = await this.repo.buscarPorAlias(evento.alias);
 
     if (eventoCadastrado && eventoCadastrado.id !== evento.id) {
-      throw new Error('Já existe um evento com esse alias.');
+      throw new HttpException('Já existe um evento com esse alias.', 400);
     }
 
     const eventoCompleto = complementarEvento(this.deserializar(evento));

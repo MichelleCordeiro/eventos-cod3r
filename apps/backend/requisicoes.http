@@ -14,15 +14,15 @@ GET http://localhost:4000/eventos/validar/evento-fullstack/21ff36d7-8fa7-495e-93
 
 ###
 POST http://localhost:4000/eventos/acessar
-
 Content-Type: application/json
+
 {
     "id": "65965e1c-8055-4795-b4a3-da93bbe97e31",
     "senha": "familia202"
 }
 
 ###
-POST http://localhost:4000/eventos/reuniao-familia-oliveira/convidado
+POST http://localhost:4000/eventos/reuniao-familia-oliveiraXXX/convidado
 Content-Type: application/json
 
 {
